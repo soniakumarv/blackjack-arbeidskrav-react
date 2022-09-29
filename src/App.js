@@ -82,9 +82,6 @@ function App() {
   const findWinner = () => {
     let dealerTotalScore = dealerScore;
     let dealerHand = [...dealerCards];
-    //if (dealer sine poeng > 21){ //Dealer har tapt}
-    //else if(dealerPoeng > minePoeng){dealer har vunnet} for hvem som har høyest
-    //else jeg har vunnet
     if (dealerTotalScore > 21) {
       return <div>Jeg har vunnet</div>;
     } else if (dealerTotalScore > calculate(userCards)) {
@@ -100,10 +97,7 @@ function App() {
     if (isGameOver) {
       return;
     }
-    //1. sjekk om dealer har < 17
-    //2. Hvis mindre enn 17, trekk kort
-    //3. Hvis over 17, stand
-    //4. Hvis dealer trekker og går over: dealer har tapt.
+
     let dealerHand = [...dealerCards];
     let dealerTotalScore = dealerScore;
 
